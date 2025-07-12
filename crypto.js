@@ -1,4 +1,4 @@
-import crypto from "node:crypto";
+import crypto from 'node:crypto';
 
 export function getSign({
   partnerId,
@@ -8,7 +8,7 @@ export function getSign({
   merchantId,
   shopId,
 }) {
-  const hmac = crypto.createHmac("sha256", partnerKey);
+  const hmac = crypto.createHmac('sha256', partnerKey);
   const timestamp = Math.floor(new Date().getTime() / 1000);
   let baseString = `${partnerId}${path}${timestamp}`;
 
@@ -16,7 +16,7 @@ export function getSign({
   if (merchantId) baseString += merchantId;
   if (shopId) baseString += shopId;
 
-  const sign = hmac.update(baseString).digest("hex");
+  const sign = hmac.update(baseString).digest('hex');
   return {
     sign,
     timestamp,

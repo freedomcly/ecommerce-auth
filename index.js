@@ -1,15 +1,15 @@
-import { getSign } from "./crypto.js";
+import { getSign } from './crypto.js';
 import {
   requestGetAccessToken,
   requestRefreshAccessToken,
-} from "./requests/shopee.js";
+} from './requests/shopee.js';
 
 const AUTH_PATH_SHOPEE =
-  "https://openplatform.shopee.cn/api/v2/shop/auth_partner";
+  'https://openplatform.shopee.cn/api/v2/shop/auth_partner';
 
 export const ShopeeAuth = {
   getAuthUrl: (options) => {
-    const path = "/api/v2/shop/auth_partner";
+    const path = '/api/v2/shop/auth_partner';
     const { sign, timestamp } = getSign({
       path,
       partnerId: options.partner_id,
@@ -32,7 +32,7 @@ export const ShopeeAuth = {
 export const TiktokAuth = {
   getAuthUrl: null, // 不知如何处理
   getAccessToken: (options) => {
-    return "";
+    return '';
   },
   refreshAccessToken: (options) => {},
 };

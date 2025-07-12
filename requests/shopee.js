@@ -1,11 +1,11 @@
-import request from "superagent";
-import { getSign } from "../crypto.js";
+import request from 'superagent';
+import { getSign } from '../crypto.js';
 
-const DOMAIN_SHOPEE = "https://openplatform.shopee.cn";
-const PREFIX_SHOPEE = "/api/v2";
-const SHOPEE_AUTH_PARTNER = "/api/v2/shop/auth_partner";
-const AUTH_TOKEN_GET = "/api/v2/auth/token/get";
-const AUTH_ACCESS_TOKEN_GET = "/api/v2/auth/access_token/get";
+const DOMAIN_SHOPEE = 'https://openplatform.shopee.cn';
+const PREFIX_SHOPEE = '/api/v2';
+const SHOPEE_AUTH_PARTNER = '/api/v2/shop/auth_partner';
+const AUTH_TOKEN_GET = '/api/v2/auth/token/get';
+const AUTH_ACCESS_TOKEN_GET = '/api/v2/auth/access_token/get';
 
 export function requestGetAccessToken(options) {
   const path = AUTH_TOKEN_GET;
@@ -19,7 +19,7 @@ export function requestGetAccessToken(options) {
   return new Promise((resolve, reject) => {
     request
       .post(`${DOMAIN_SHOPEE}${path}`)
-      .set("Content-Type", "application/json")
+      .set('Content-Type', 'application/json')
       .query({
         partner_id,
         timestamp,
@@ -61,7 +61,7 @@ export function requestRefreshAccessToken(options) {
   return new Promise((resolve, reject) => {
     request
       .post(`${DOMAIN_SHOPEE}${path}`)
-      .set("Content-Type", "application/json")
+      .set('Content-Type', 'application/json')
       .query({
         partner_id: options.partner_id,
         timestamp,

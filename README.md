@@ -33,6 +33,13 @@ const tokens = await ShopeeAuth.getAccessToken({
 })
 ```
 
+## 参考资料
+
+* [OAuth 2.0 协议](https://oauth.net/2/)
+* [Shopee开放平台](https://open.shopee.com/)
+* [Tiktok Partner Center](https://partner.tiktokshop.com/)
+
+
 ## 许可证
 
 ISC License

@@ -1,20 +1,4 @@
-// import path = require('path');
-
 export default {
-  // 数据库配置
-  database: {
-    uri: process.env.MONGODB_URI || 'mongodb://localhost:27017/products',
-    user: process.env.MONGODB_USER,
-    password: process.env.MONGODB_PASSWORD,
-  },
-
-  // JWT配置
-  jwt: {
-    secret: process.env.JWT_SECRET || 'your-secret-key',
-    //   expiresIn: process.env.JWT_EXPIRES_IN || '1h',
-    //   refreshExpiresIn: process.env.JWT_REFRESH_EXPIRES_IN || '7d'
-  },
-
   // 第三方API配置
   apis: {
     tiktok: {
@@ -45,31 +29,5 @@ export default {
       region: process.env.ALIYUN_REGION || '',
       bucket: process.env.ALIYUN_BUCKET || '',
     },
-  },
-
-  // 服务器配置
-  server: {
-    port: process.env.PORT || 3000,
-    env: process.env.NODE_ENV || 'development',
-    cors: {
-      origin: process.env.CORS_ORIGIN || '*',
-      credentials: true,
-    },
-  },
-
-  // 文件上传配置
-  upload: {
-    cleanupInterval: process.env.CLEANUP_INTERVAL || 1000 * 60 * 60,
-    // dir: process.env.UPLOAD_DIR || path.join(__dirname, '../../tmp')
-    //   maxSize: process.env.UPLOAD_MAX_SIZE || 5 * 1024 * 1024, // 5MB
-    //   allowedTypes: ['image/jpeg', 'image/png', 'application/pdf']
-  },
-
-  // 日志配置
-  // logging: {
-  //   level: process.env.LOG_LEVEL || 'info',
-  //   dir: process.env.LOG_DIR || 'logs',
-  //   maxSize: process.env.LOG_MAX_SIZE || '20m',
-  //   maxFiles: process.env.LOG_MAX_FILES || '14d'
-  // }
+  }
 };

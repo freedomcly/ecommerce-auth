@@ -8,3 +8,8 @@ export const DOMAIN_AUTH_TIKTOK = 'https://auth.tiktok-shops.com'
 export const PREFIX_TIKTOK = '/api/v2'
 export const AUTH_TOKEN_GET_TIKTOK = `${PREFIX_TIKTOK}/token/get`
 export const AUTH_TOKEN_REFRESH_TIKTOK = `${PREFIX_TIKTOK}/token/refresh`
+
+export const DOMAIN_LAZADA = 'https://auth.lazada.com'
+export const PREFIX_LAZADA = '/rest'
+export const AUTH_TOKEN_GET_LAZADA = '/auth/token/create'
+export const AUTH_TOKEN_REFRESH_LAZADA = '/auth/token/refresh'

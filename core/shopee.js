@@ -16,9 +16,6 @@ export default {
     })
     return `${DOMAIN_SHOPEE}${path}?partner_id=${options.partner_id}&timestamp=${timestamp}&sign=${sign}&redirect=${options.redirect}`
   },
-  // code 换 access token
-  // code 10min过期
-  // access token 4小时过期
   getAccessToken: (options) => {
     return requestGetAccessToken(options)
   },
